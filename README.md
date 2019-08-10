@@ -1,4 +1,4 @@
-## 环境初始化 ( for MacOS)
+## qemu 环境配置向导(for MacOS)
 
 1. 克隆此代码库
    
@@ -16,6 +16,7 @@
 
     ```
     brew install $(brew deps qemu)
+    brew install pkg-config
     ```
 
 
@@ -24,6 +25,8 @@
     ```
     ./configure --disable-kvm --disable-werror --disable-sdl --target-list="i386-softmmu x86_64-softmmu"
     ```
+
+    如果提示 python 版本不正确,则加上 `--python=/usr/bin/python`.
 
 5. 编译并安装
    
